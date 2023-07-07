@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
+
+
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url("./font/Pretendard-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: Pretendard-Regular, "Times New Roman", Dotum, "돋움", sans-serif;
+}
+
+.pc {
+    font-family: 'PyeongChangPeace-Bold';
+}
+
+
+h1 {
+    color: red;
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+strong {
+    border-bottom: 5px solid currentColor;
+}
+
+h2 {
+    color: royalblue;
+    font-family: 'Noto Sans KR', sans-serif;
+}

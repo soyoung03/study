@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: slateblue;
+            margin: 10px;
+        }
+
+        .box1 {
+            /* %랑 px 둘다 사용해도 되지만 상황에 따라 더 적합한 걸로 사용(글자를 넣어서 글자에 따라 모양이 변하게 될 때는 px, 없어도 될땐 % 사용 가능) */
+            border-radius: 50%;
+        }
+
+        .box2 {
+            border-radius: 10px;
+        }
+
+        .box3 {
+            /* 100px 0 0 으로 해도 다시 처음 0으로 돌아가서 똑같음 */
+            border-radius: 100px 0 0 0;
+        }
+
+        .box4 {
+            /* 100px 0만 적어도 한번 더 반복 되서 100px 0 100px 0이랑 똑같음 */
+            border-radius: 100px 0;
+        }
+
+        .box5 {
+            border-radius: 0 50%;
+        }
+
+        .box6 {
+            border-radius: 100px 100px 0 0;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+
+</body>
+
+</html>
