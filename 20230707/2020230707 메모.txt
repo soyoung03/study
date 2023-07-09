@@ -1,0 +1,50 @@
+20230707
+
+1.css 우선순위
+- 띄어쓰기는 자식을 뜻한다
+(.class.class는 클래스 두개를 뜻하고 .class .class는 클래스 안의 자식인 클래스를 찾는 것이다.)
+2. 블랙레벨 요소 vs 인라인 레벨 요소
+3.css box model
+-마진 병합 현상은 가로로는 적용이 안되고 세로 마진 일때만 나타난다
+마진 병합 현상 해결 방법에 적힌 애들로 해결 보다는 꼭 위의 방법이 필요한 
+경우가 아니면  padding  같은 방법을 사용
+
+
+
+면ㄴ접볼때 디자이너랑 협업은 어떤 걸로 하는지 체크하는게 좋음
+포토샵으로 한다고 하면 생각해봐라
+피그마가 너무 좋아져서 편하다.
+4. display
+5.reset.css
+6.img
+
+
+
+
+
+
+선택자 우선순위, important쓰지말기, 후자 우선의 원칙
+블록레벨요소 인라인 레벨 요소
+박스모델
+
+
+
+
+1. 로컬->깃허브
+git remote -v
+git add .
+git commit -m "20230707"
+ git push origin main
+
+2.깃허브-> 로컬
+git clone 주소       (맨처음에 사용,완전 백지일때)
+git remote -v
+git pull origin main
+
+3.상태 확인( 순서 상관 없이 확인할 때 언제든 사용)
+git remote -v      (연결 확인)
+git status           (변경 상황 확인)
+
+4. 깃허브 로컬 연결 관련
+git remote add origin 주소(연결 하기)
+git remote remove origin ( 연결 끊기)
