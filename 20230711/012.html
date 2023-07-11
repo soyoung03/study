@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 숨김처리</title>
+
+    <style>
+        p {
+            display: none;
+        }
+
+        .a11y-hidden {
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(50%);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="a11y-hidden">pp</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quasi impedit, inventore praesentium recusandae
+        magni labore non aliquid, beatae repudiandae corporis maiores. Sapiente deserunt hic at, accusantium molestiae
+        quasi earum.</p>
+</body>
+
+</html>
