@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        button:active {
+            background-color: red;
+        }
+
+        button:hover {
+            background-color: blue;
+        }
+
+        /* 마우스 클릭시에도 보임 */
+        .btn1:focus {
+            border: 5px solid green;
+        }
+
+        /* 마우스 클릭시에는 안보임 */
+        .btn2:focus-visible {
+            border: 5px solid green;
+        }
+
+        /* 내 자식 요소 중에  focus가 있다면 설정 되어있으면 적용되게 하는 것 */
+        div:focus-within {
+            background: skyblue;
+        }
+
+        button:enabled {
+            cursor: pointer;
+        }
+
+        /*
+        여러개를 쓰고 싶을 대 이렇게 씀
+        active는 hover보다 뒤에 써야함
+        button:enabled:active {
+            background-color: red;
+        }
+
+        button:enabled:hover {
+            background-color: blue;
+        } */
+    </style>
+</head>
+
+<body>
+    <div>
+        <button class="btn1 " type="button">버튼</button>
+        <button class="btn2 " type="button">버튼</button>
+    </div>
+
+</body>
+
+</html>

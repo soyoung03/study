@@ -1,0 +1,14 @@
+div {
+    background-color: orange;
+    width: 100%;
+    /* width가 적혀있지 않았을 땐 width: auto;이 말이 이미 있는 것이다 */
+    height: auto;
+    margin-left: 50px;
+    /* 왼쪽 바깥 여백 */
+    padding: 40px;
+}
+
+div.header {
+    background-image: url(images/cover05.png
+);
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+        .wrap {
+            background-color: slateblue;
+            width: 1000px;
+            margin: auto;
+
+            /* width에 마진을 40px씩 주겠다는 뜻
+            max-width: calc(1000% - 80px); */
+
+            /* 둘중에 작은 값을 선택해서 적용하란 뜻
+            max-width: calc(1000% - 80px);랑 똑같이 적용 됨 큰 수를 적용하라고 할 때는 max 사용  */
+            width: min(1000px, calc(100% - 80px)),
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        hello
+    </div>
+</body>
+
+</html>

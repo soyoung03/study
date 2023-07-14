@@ -59,7 +59,7 @@ button:enabled {
 
 
 
-
+line-height 줄과 줄 사이 간격
 
 
 
