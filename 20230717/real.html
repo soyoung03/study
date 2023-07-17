@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid 실습</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 600px;
+            background-color: #eee;
+            display: grid;
+        }
+
+        header {
+            background-color: blue;
+            grid-area: 1/1/4/3;
+        }
+
+        aside {
+            background-color: yellow;
+            grid-area: 4/-6/6/-3;
+        }
+
+        .sec1 {
+            background-color: purple;
+        }
+
+        .sec2 {}
+
+        .fo1 {}
+
+        .fo2 {}
+    </style>
+
+</head>
+
+<body class="container">
+    <header>header</header>
+    <aside>aside</aside>
+    <section class="sec1">section 1</section>
+    <section class="sec2">section 2</section>
+    <footer class="fo1">footer1</footer>
+    <footer class="fo2">footer2</footer>
+</body>
+
+</html>
