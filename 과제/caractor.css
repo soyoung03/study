@@ -1,0 +1,61 @@
+body {
+	background: rgb(247, 206, 213);
+}
+
+.cat {
+	width: 600px;
+	height: 600px;
+	overflow: hidden;
+	position: relative;
+	left: 50%;
+	margin: 50px auto auto -300px;
+
+}
+
+
+.cat .face {
+	border-top: 0;
+	width: 380px;
+	height: 250px;
+	background: #888786;
+	border-radius: 40px 40px 90px 90px;
+	;
+	position: absolute;
+	top: 33%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 3;
+	overflow: hidden;
+}
+
+.ear-left {
+	width: 0;
+	height: 0;
+	border-left: 80px solid transparent;
+	border-right: 80px solid transparent;
+	border-bottom: 80px solid #888786;
+}
+
+.ear-right {
+	width: 0;
+	height: 0;
+	border-left: 80px solid transparent;
+	border-right: 80px solid transparent;
+	border-bottom: 80px solid #888786;
+}
+
+.ear-in-left {
+	width: 0;
+	height: 0;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-bottom: 40px solid #fab1b1;
+}
+
+.ear-in-right {
+	width: 0;
+	height: 0;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-bottom: 40px solid #fab1b1;
+}
