@@ -1,0 +1,6 @@
+<모르는 부분>
+placeholder="제목"
+
+flex-shrink: 0;
+
+flex-grow: 1;
