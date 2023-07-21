@@ -1,6 +1,13 @@
 <모르는 부분>
 placeholder="제목"
 
-flex-shrink: 0;
+flex-shrink: 0;   쪼그라트리지 않겠다
 
-flex-grow: 1;
+flex-grow: 1;    
+
+
+
+
+
+
+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
