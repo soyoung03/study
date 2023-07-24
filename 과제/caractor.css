@@ -1,3 +1,60 @@
+@keyframes spit {
+	60% {
+		opacity: 0;
+		top: 42%;
+	}
+
+	75% {
+		opacity: 1;
+		top: 43%;
+		height: 10px;
+	}
+
+	100% {
+		opacity: 1;
+		top: 45%;
+		height: 200px;
+	}
+}
+
+@keyframes eyeLeftMoving {
+	65% {
+		width: 32px;
+		height: 16px;
+		border-radius: 30px 30px 30px 30px;
+		transform: translate(-50%, -50%) rotate(-8deg);
+	}
+
+	100% {
+		width: 32px;
+		height: 16px;
+		border-radius: 30px 30px 30px 30px;
+		transform: translate(-50%, -50%) rotate(-20deg) scale(1.1);
+	}
+
+
+}
+
+@keyframes eyeRightMoving {
+	65% {
+		width: 32px;
+		height: 16px;
+		border-radius: 30px 30px 30px 30px;
+		transform: translate(50%, -50%) rotate(8deg);
+	}
+
+	100% {
+		width: 32px;
+		height: 16px;
+		border-radius: 30px 30px 30px 30px;
+		transform: translate(50%, -50%) rotate(20deg) scale(1.1);
+	}
+
+
+}
+
+
+
 body {
 	background: rgb(247, 206, 213);
 }
@@ -16,7 +73,7 @@ body {
 .cat .face {
 	border-top: 0;
 	width: 380px;
-	height: 250px;
+	height: 170px;
 	background: #888786;
 	border-radius: 40px 40px 90px 90px;
 	;
@@ -28,34 +85,215 @@ body {
 	overflow: hidden;
 }
 
-.ear-left {
+.cat .face .eye {
+	position: relative;
+	width: 30px;
+	height: 25px;
+	border-radius: 50px 50px 50px 50px;
+	background: #5b3c27;
+	top: 40%;
+	z-index: 3;
+	overflow: hidden;
+}
+
+.cat .face .eye.left {
+	animation: eyeLeftMoving 4s ease infinite alternate;
+	position: absolute;
+	left: 25%;
+	transform: translate(-50%, -50%) rotate(-8deg);
+}
+
+.cat .face .eye.right {
+	animation: eyeRightMoving 4s ease infinite alternate;
+	position: absolute;
+	right: 25%;
+	transform: translate(50%, -50%) rotate(8deg);
+}
+
+.ear {
+	width: 60px;
+	height: 80px;
+	display: inline-block;
+	position: absolute;
+	top: 130px;
+}
+
+.ear::before {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 60px;
+	margin: 25px;
+}
+
+.ear.in-left,
+.ear.in-right {
+	width: 60px;
+	height: 80px;
+	display: inline-block;
+	position: absolute;
+	top: 169px;
+}
+
+.ear.left {
 	width: 0;
 	height: 0;
 	border-left: 80px solid transparent;
 	border-right: 80px solid transparent;
 	border-bottom: 80px solid #888786;
+	position: absolute;
+	left: 20%;
 }
 
-.ear-right {
+.ear.left::before {
+	border-radius: 50% 10% 0 0;
+}
+
+.ear.right {
 	width: 0;
 	height: 0;
 	border-left: 80px solid transparent;
 	border-right: 80px solid transparent;
 	border-bottom: 80px solid #888786;
+	position: absolute;
+	right: 20%;
 }
 
-.ear-in-left {
+.ear.in-left {
 	width: 0;
 	height: 0;
 	border-left: 40px solid transparent;
 	border-right: 40px solid transparent;
 	border-bottom: 40px solid #fab1b1;
+	position: absolute;
+	left: 27%;
 }
 
-.ear-in-right {
+.ear.in-right {
 	width: 0;
 	height: 0;
 	border-left: 40px solid transparent;
 	border-right: 40px solid transparent;
 	border-bottom: 40px solid #fab1b1;
+	position: absolute;
+	right: 27%;
+}
+
+.face .nose {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	padding-top: 10px;
+	z-index: 3;
+}
+
+.face .nose .black {
+	width: 25px;
+	height: 15px;
+	background-color: #0d0b06;
+	border-radius: 40% 40% 50% 50%;
+	position: absolute;
+	left: 50%;
+	top: 15%;
+	transform: translateX(-50%);
+	z-index: 3;
+}
+
+.face .nose .white {
+	background-color: white;
+	border: 8px solid #5b3c27;
+	width: 30px;
+	height: 15px;
+}
+
+.face .nose .white.left {
+	transform: rotate(-10deg);
+	border-radius: 50px 40px 80px 60px;
+}
+
+.face .nose .white.right {
+	margin-left: -8px;
+	transform: rotate(10deg);
+	border-radius: 40px 50px 60px 80px;
+}
+
+.face .mouth {
+	animation: mouthMoving 2s ease infinite alternate;
+	width: 40px;
+	height: 15px;
+	border-radius: 20% 20%;
+	background-color: #d7715f;
+	border: 8px solid #5b3c27;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+
+.face .whisker {
+	width: 50px;
+	height: 5px;
+	background: #0d0b06;
+	border-radius: 4px;
+	position: absolute;
+}
+
+.face .whisker.left.top {
+	top: 43%;
+	left: -4%;
+	transform: rotate(-3deg);
+}
+
+.face .whisker.left.bottom {
+	top: 58%;
+	left: -2.5%;
+	transform: rotate(-20deg);
+}
+
+.face .whisker.right.top {
+	top: 43%;
+	right: -4%;
+	transform: rotate(3deg);
+}
+
+.face .whisker.right.bottom {
+	top: 58%;
+	right: -2.5%;
+	transform: rotate(20deg);
+}
+
+.face .cheek {
+	width: 36px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #fcb4f0;
+	position: absolute;
+	top: 50%;
+	z-index: 4;
+	animation: cheekMoving 0.4s ease infinite alternate;
+}
+
+.face .cheek.left {
+	left: 13%;
+}
+
+.face .cheek.right {
+	right: 13%;
+}
+
+.spit {
+	animation: spit 4s ease infinite alternate;
+	width: 20px;
+	height: 10px;
+	background: skyblue;
+	border-radius: 10px;
+	position: absolute;
+	top: 20%;
+	z-index: 3;
+	opacity: 0;
+
+	right: 45%;
 }
