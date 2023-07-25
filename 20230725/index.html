@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .txt-hide {
+            /* width랑 height를 애초에 0px로 만들고 overflow를 안주면 스크린 리더가 이 코드 자체를 읽을 수가 없어서 없는 취급이 되기 때문에 1px를 줘야한다 */
+            overflow: hidden;
+            width: 1px;
+            height: 1px;
+            /* 경로에 따라 html 요소를 자른다  inset네모모양으로 잘라준다 50% 네 면에서 모두 50%씩 짤라서 결국 사라지게 자르는 방법*/
+            clip-path: inset(50%);
+        }
+
+        .labl-hold {
+            position: relative;
+        }
+
+        .labl-hold::before {
+            display: inline-block;
+            /* 가상요소를 쓸때는 무조건 content를 빈공간이라도 넣어줘야 화면에 나타난다. */
+            content: '';
+            width: 22px;
+            height: 22px;
+            margin-right: 10px;
+            border: 1px solid black;
+            vertical-align: -5px;
+        }
+
+        .inphold:focus-visible+.labl-hold::before {
+            outline: 2px solid teal;
+            outline-offset: 3px;
+        }
+
+        .labl-hold::after {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: 20px;
+
+            width: 22px;
+            height: 22px;
+            background: url(./checkmark.png)00/22px no-repeat;
+            background-size: 22px;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .inphold:checked+.labl-hold::after {
+            left: 0;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="inpHold" class="inphold txt-hide">
+    <label for="inpHold" class="labl-hold">로그인 상태 유지</label>
+</body>
+
+</html>

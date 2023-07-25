@@ -1,0 +1,29 @@
+.sec2 button {
+    width: 472px;
+    height: 50px;
+    flex-shrink: 0;
+
+    border-radius: 5px;
+    border: 1px solid var(--767676, #767676);
+    background: #FFF;
+
+    color: var(--767676, #767676);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec2 img {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 12px;
+    padding-top: 10px;
+}
