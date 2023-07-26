@@ -1,0 +1,82 @@
+function solution(str1, str2) {
+    return str1.includes(str2) ? 1 : 2;
+} 
+조건 연산자를 썼다 includes가 요소가 배열 안에 존재하는 경우에만 true 을 반환한다는 뜻
+ str1이 str2를 포함한다면(true인 경우), 1을 반환하고
+포함하지 않으면(false인 경우), 2를 반환하게 했다.
+
+
+
+function solution(n) {
+    var answer = [];
+      for (let i = 1; i<=n; i+=2) {
+          answer.push(i);
+      }
+    return answer;
+} 
+for 문을 써서
+i를 1부터 시작해서 n까지 2씩 증가시키며 반복합니다. (2씩 증가하게 하면 i는 항상 홀수로 나온다.)
+그렇게 해서 i값을 push를 써서 배열에 추가했다
+answer값이 나오게 했다.
+
+
+
+
+function solution(num_list, n) {
+    var answer = [];
+    
+    return num_list.filter((_, i) => i%n === 0)
+} 
+filter 를 사용하여  num_list를 필터링하게 했다. 
+filter안에 (매개변수를 넣어줘야해서) _랑 i를 넣었는데
+_는 실제로 사용되는 건 아니고 , 이 값을 사용하지 않겠다라는 뜻으로 
+그냥 관례적으로 _를 쓴다고 한다
+그리고 i%n === 0을 써서  n의 배수를 구해서 값이 출력되게 했다.
+
+
+
+
+
+
+function solution(num_list) {
+    let last =num_list[num_list.length-1] 
+    let last2 = num_list[num_list.length-2]
+    if(last > last2) {
+       num_list.push(last-last2)
+    } else {
+        num_list.push(last*2)
+    }
+  return num_list
+}
+last 변수를 만들어서 num_list배열의 마지막 요소를 넣었다 -1을 하면 마지막 요소를 뜻한다
+last2를 만들어서 -2를 써서 뒤에서 두번째 요소를 넣었다
+if 문 써서  last가 last2보다 크다면, 그 두개의 차를  배열에 넣도록 하고 크지 않으면 last값을
+두배로 해서 배열에 넣도록 짜서 numlist의 배열이 나오도록 했다
+
+
+
+
+
+function solution(n_str) {
+   return Number(n_str);
+} 
+ Number 가 문자열이나 다른 값을 숫자로 변환
+ Number을 사용하여 n_str 을 숫자로 변환하고, 변환된 숫자를 반환
+
+
+parseInt(),Number() 둘다 가능
+ parseInt()는 정수로 만들어주는 기능이기 때문에 소수점을 
+표현할수 없지만, Number()는 가능하다.
+
+Number()은( '123'과 같이) 숫자로 이루어진 문자열만을
+ 숫자로 바꿔주지만,
+
+parseInt()는 ('111하하하'와 같은) 숫자+문자같이 되 있는 거에서도  숫자만 찾아서
+ 숫자로 바꿔줄 수 있다.
+
+
+
+
+
+
+
