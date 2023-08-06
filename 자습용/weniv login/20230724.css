@@ -1,0 +1,22 @@
+/* 초기화 */
+body {
+    width: 350px;
+    height: 140px;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.sec1 {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.sec2 {
+    width: 318px;
+    height: 40px;
+    border-radius: 4px;
+    background: #711BFF;
+}
