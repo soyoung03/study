@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        function checkNum(num) {
+            for (let index = 0; index < 100; index++) {
+                console.log(index)
+                if (num === index) {
+                    console.log("범위안에 값이 있습니다.")
+                    return "빨리 끝났다";
+                    // return꼭 값을 출력하는게 아니라 함수를 중간에 멈춰줄 때도 사용 가능
+                }
+            }
+            return "아 끝났다"
+        }
+
+        console.log(checkNum(30))
+    </script>
+</body>
+
+</html>

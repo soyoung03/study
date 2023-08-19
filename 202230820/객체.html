@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        // const arr = [1,2,3]
+        // const [a,c,b] = arr;
+
+        // console.log(a,b,c)
+
+        // var o = { p: 42, q: true };
+        var o = { age: 42, name: "hello" };
+        // 구조분해할당할때 {원래키값:내가쓸변수명,원래키값:내가쓸변수명}
+        var { name: 이름, age: 나이 } = o;
+
+        console.log(나이); // 42
+        console.log(이름); // true
+
+
+        //구조분해 할당 실무에서도 많이 씀
+    </script>
+</body>
+
+</html>

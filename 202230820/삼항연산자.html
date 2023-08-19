@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        function getFee(파라미터) {
+            return 파라미터 ? '$2.00' : '$10.00';
+        }
+
+        //위에 껄 if문으로 변형
+        function getFee(파라미터) {
+            if (파라미터 == true) {
+                console.log($2.00);
+            } else {
+                console.log($10.00);
+            }
+        }// 내가 쓴 답
+
+        function getFee(파라미터) {
+            if (파라미터) {
+                return '$2.00';
+            } else {
+                return '$10.00';
+            }
+        }//정답
+
+    </script>
+</body>
+
+</html>

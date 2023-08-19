@@ -1,0 +1,8 @@
+https://chocolatey.org/
+
+
+switch 문에서는 break를 넣지 않으면 전부 다 실행돼 버린다
+
+
+ return: 값을 반환해주는 것, 꼭 값을 출력하느느게 아니라 식을 중간에 멈춰줄 때도 사용 가능
+console.log: 창에 띄워주는거라서 return값이 필요 없다
