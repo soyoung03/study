@@ -1,0 +1,58 @@
+n
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <h3>원본 요소:</h3>
+    <p id="source">
+        <style>
+            #source {
+                color: red;
+            }
+        </style>
+        <!-- br은 줄바꿈 -->
+        아래에서<br />이 글을<br />어떻게 인식하는지 살펴보세요.
+        <span style="display:none">숨겨진 글</span>
+    </p>
+
+
+    <h3>textContent 결과:</h3>
+    <textarea id="textContentOutput" rows="6" cols="30" readonly>...</textarea>
+    <h3>innerText 결과:</h3>
+    <textarea id="innerTextOutput" rows="6" cols="30" readonly>...</textarea>
+
+    <!-- 로그인 상태에 따라서 숨겨야하는 텍스트가 있는 ㄴ경우 -->
+    <figure>
+        <img src="" alt="청바지 삼종세트">
+        <figcaption>상품 가격 : 29,900원 <span class="hidden">VIP 회원이라면 29,900원!!</span></figcaption>
+    </figure>
+
+    <script>
+        const cost = document.querySelector('figcaption');
+        console.log(cost.textContent); // 순수하게 텍스트가 필요할 때는 textContent를 쓰는게 좋다 특정요소안에 텍스트를 넣고 싶거나 특정요소안에 텍스트를 찾고 싶을 때 사용
+        console.log(cost.innerText);
+        cost.innerHTML =
+            `<dialog>
+                <div>
+                    </div>
+                </dialog>
+                `
+
+
+        // const source = document.getElementById("source");//getElementById 는 source 선택
+        // const textContentOutput = document.getElementById("textContentOutput");
+        // const innerTextOutput = document.getElementById("innerTextOutput");
+
+        // textContentOutput.innerHTML = source.textContent; //textContent는 p 태그안에 들어있는 것들을 순수하게 문자로만 전달한다 css/html 가 적용이 안된다
+        // innerTextOutput.innerHTML = source.innerText;//innerText는 html은 인식하는데 css는 일부 속성만 인식한다 굳이 쓸 필요 없고 innerHTML이랑 textContent만 거의 쓰게 될 것이다.
+    </script>
+</body>
+
+</html>

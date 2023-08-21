@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p></p>
+    <input type="text">
+    <button>작동!</button>
+
+
+    <script>
+        const text = document.querySelector('p');
+        const inp = document.querySelector('input');
+        const btn = document.querySelector('button');
+
+        btn.addEventListener('click', function () {
+            text.innerHTML = inp.value;
+        });
+
+//여기에 라이브서버 창에 <img src='x' onerror='alert(1)'> 이렇게 html 문법을 넣으면 html이 적용돼서 나오기 때문에 innerHTML의 주의 사항이 저런 상황에서 악의적인 사람이 충분히 창에 html코드를 넣어서 페이지를 망가트릴 수 있다는 말이다
+    </script>
+</body>
+
+</html>
