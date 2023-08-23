@@ -51,19 +51,15 @@
 
 
         class FireSausage extends Sausage {
-            constructor() {
+            constructor(taste) {
                 super(taste);
-                this.taste1 = '소고기';
-                this.taste2 = '파';
             }
 
-            saySausagetaste() {
-                this.sayFireTaste();
+            sayFireTaste() {
+                this.saySausagetaste();
                 console.log(`불맛이 나기 시작한다`)
             }
         }
-        const eat = new Sausage('불고기');
-        const eat1 = new FireSausage();
 
 
         //다른 사람이 한 거 정답
