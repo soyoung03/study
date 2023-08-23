@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        //내가 한거
+        class Sausage {
+            constructor(taste) {
+                this.taste1 = '소고기';
+                this.taste2 = '파';
+            }
+
+            saySausagetaste() {
+                console.log(`${this.taste1}와 ${this.taste2} 맛이 난다!`)
+            }
+        }
+
+
+        class Sausage extends FireSausage {
+            constructor(taste) {
+                super(taste);
+                this.taste1 = '소고기';
+                this.taste2 = '파';
+            }
+
+            saySausagetaste() {
+                this.sayFireTaste();
+                console.log(`불맛이 나기 시작한다`)
+            }
+        }
+
+        //다른사람이 수정해준거
+        class Sausage {
+            constructor(taste) {
+                this.taste = taste;
+                this.taste1 = '밥';
+                this.taste2 = '바밥';
+            }
+
+            saySausagetaste() {
+                console.log(`${this.taste1}와 ${this.taste2} 맛이 난다!`)
+            }
+        }
+
+
+        class FireSausage extends Sausage {
+            constructor() {
+                super(taste);
+                this.taste1 = '소고기';
+                this.taste2 = '파';
+            }
+
+            saySausagetaste() {
+                this.sayFireTaste();
+                console.log(`불맛이 나기 시작한다`)
+            }
+        }
+        const eat = new Sausage('불고기');
+        const eat1 = new FireSausage();
+
+
+        //다른 사람이 한 거 정답
+        class Factory {
+            constructor(taste1, taste2) {
+                this.taste1 = taste1;
+                this.taste2 = taste2;
+            }
+
+            taste() {
+                console.log(`${this.taste1}와 ${this.taste2} 맛이 난다!`);
+            }
+        }
+
+        class FiresSausage extends Factory {
+            fireTaste() {
+                this.taste();
+                console.log('불맛이 난다!');
+            }
+        }
+
+        const sausage = new FiresSausage('소고기', '파');
+        sausage.fireTaste();
+    </script>
+</body>
+
+</html>
