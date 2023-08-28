@@ -1,0 +1,6 @@
+컨트롤+알트 누르고 방향키 아래 누르면 여러 줄을 한꺼번에 쓸 수 있따
+
+
+
+1.text-sm, text-lg,texdt-2xl,text-3xl
+2.text[14px]
