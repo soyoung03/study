@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+    </ul>
+
+    <script>
+        const ulEl = document.querySelector('ul');
+        const liEl = document.querySelector('li');
+        liEl.textContent = 'List 추가'
+        ulEl.appendChild(liEl);
+
+        ulEl.insertBefore(liEl, ulEl.querySelector('li:nth-child(2)'))
+
+
+        const pElb = document.createElement('p');
+        const pEla = document.createElement('p');
+        pEl.textContent = 'before'
+        ulEl.parentElement.insertBefore(pElb, ulEl)
+        ulEl.parentElement.appendChild(pEla)
+    </script>
+</body>
+
+</html>
